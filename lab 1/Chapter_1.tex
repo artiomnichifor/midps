@@ -1,0 +1,54 @@
+\section{Desfasurarea lucrarii de laborator}
+
+\subsection{Conditii si cerinte}
+
+Basic Level (nota 5 || 6) :
+\begin{itemize}
+	\item initializeaza un nou repositoriu
+	\item configureaza-ti VCS
+	\item crearea branch-urilor (creeaza cel putin 2 branches)
+	\item commit pe ambele branch-uri (cel putin 1 commit per branch)
+\end{itemize}
+
+Normal Level (nota 7 || 8):
+\begin{itemize}
+	\item seteaza un branch to track a remote origin pe care vei putea sa faci push (ex. Github, Bitbucket or custom server)
+	\item reseteaza un branch la commit-ul anterior
+	\item salvarea temporara a schimbarilor care nu se vor face commit imediat.
+	\item folosirea fisierului .gitignore
+\end{itemize}
+
+Advanced Level (nota 9 || 10):
+\begin{itemize}
+	\item merge 2 branches
+	\item rezolvarea conflictelor a 2 branches
+	\item comezile git care trebuie cunoscute
+\end{itemize}
+\subsection{Analiza lucrarii de laborator}
+
+	Linkul repozitoriului  \url{https://github.com/artiomnichifor/midps}
+
+	Esenta lucrarii date de laborator a constat in acomodarea cu mediul de lucru al VCS si studiul lor. Creind un cont pe GitHub am avut posibilitatea de a lua cunostinata cu elementele si proprietatile unui VCS. La inceput am initializat si am clonat un repozitoriu, indeplinind si cerintele de modificae acestuia. Am creat a doua ramura si am efectuat mai multe commituri pentru fiecare, studiind si proprietatile de schimbare a ramurei prelucrate. Am evidentiat comenzile de eliminare a erorilor precum git reset si git revert pentru a aduce ramura la starea in care a fost imediat dupa ultimul commit si anularea ultimului commit respectiv. Am salvat temporar schimbarile fara a face commit prin intermediul comenzii git stash, pentru a fi utilizate ulterior. Am luat cunostinnta cu prpritatile fisierului .gitignore, care permite pastrarea unor fisiere doar in depozitoriul local, identificate dupa extensia sa sau dupa insasi numele sau. In sfirsit am efectuat concatinarea a doua ramuri si am cercetat erorile ce se pot petrce in urma acestora, care sunt cauzate de asemanrile dintre schimbarile in ramuri. Aceste erori pot fi usor identificate cu ajutorul functiei git status, identificindu- se nu doar fisierul in care s- a depistat conflictul ci si locul acesteia.
+
+
+
+\subsection{Imagini}
+
+\includegraphics[]{C:/Users/nichi/Desktop/Capture.PNG}
+
+	Un exemplu de creare a unui nou branch si definirea acestuia ca ramura de prelucrat.
+
+
+\includegraphics[]{C:/Users/nichi/Desktop/2.PNG}
+
+	Demonstarea comenzii git log destinate afisarii listingului commiturilor si hashurilor sale utilizate pentru eliminarea commiturilor din git revert.
+
+
+\includegraphics[]{C:/Users/nichi/Desktop/3.PNG}
+
+	Exemplu de utilizare a functiiei git stash list pentru pastrarea schimbarilor in buffer si utilizarea ultioarea prin git stash aplly.
+
+
+
+
+
