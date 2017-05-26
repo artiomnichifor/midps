@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView contactImageView;
     List<Contact> Contacts = new ArrayList<Contact>();
     ListView contactListView;
+    DatabaseHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         addressTxt = (EditText) findViewById(R.id.txtAddress);
         contactListView = (ListView) findViewById(R.id.listView);
         contactImageView = (ImageView) findViewById(R.id.imgViewContactImage);
-
+        dbHandler = new DatabaseHandler(getApplicationContext());
         TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
 
         tabHost.setup();
@@ -59,9 +60,12 @@ public class MainActivity extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Contact contact = new Contact(dbHandler.getContactsCount(), String.valueOf(nameTxt.getText()),String.valueOf(phoneTxt.getText()),String.valueOf(emailTxt.getText()),String.valueOf(addressTxt.getText()));
                 //Toast.makeText(getApplicationContext(),"Your contact was created", Toast.LENGTH_SHORT).show();
-                addContacts(nameTxt.getText().toString(), phoneTxt.getText().toString(), emailTxt.getText().toString(), addressTxt.getText().toString());
+            /*    addContacts(nameTxt.getText().toString(), phoneTxt.getText().toString(), emailTxt.getText().toString(), addressTxt.getText().toString());*/
                 populateList();
+                dbHandler.createContact(contact);
+                Contacts.add(contact);
                 Toast.makeText(getApplicationContext(), nameTxt.getText().toString() + "has been aded to your Contacts", Toast.LENGTH_SHORT).show();
         }
         });
@@ -92,6 +96,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(Intent.createChooser(intent, "Select Content Image"), 1);
             }
         });
+
+      /*  List<Contact> addableContacts=dbHandler.getAllContacts();
+        int contactCount = dbHandler.getContactsCount();
+
+        for(int i=0; i<contactCount; i++)
+            Contacts.add(addableContacts.get(i)); */
     }
 
     public void onActivityResult(int reqCode, int resCode, Intent data){
@@ -107,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addContacts(String name, String phone, String email, String address){
-        Contacts.add(new Contact(name, phone, email, address));
+        Contacts.add(new Contact(0,name, phone, email, address));
 
     }
 
