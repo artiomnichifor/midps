@@ -1,19 +1,3 @@
-
-Medii Interactive de Dezvoltare a Produselor Soft LAB #3
-
-Note: Foloseste un IDE diferit pentru fiecare lucrare de laborator
-
-Web development
-
-Prerequisites:
-
-IDEs/text editors (alege unul): Sublime Text 3, RubyMine, PyCharm, Komodo, Coda, phpStorm, webStorm, Brackets
-Limbaje de prohramare: Ruby, Python, JS, PHP
-Technologii si Frameworks: Ruby on Rails, Django, Node.js && Express
-Obiective:
-
-Realizarea unui simplu Web Site personal
-Realizarea unui mockup corespunzatorul site-ului care urmeaza a fi realizat
 Interactive Development Environments Laboratory Work #4
 
 Foloseste un nou IDE pentru fiecare lucrare de laborator
