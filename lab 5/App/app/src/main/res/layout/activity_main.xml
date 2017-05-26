@@ -1,133 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:orientation="vertical"
-    tools:context="com.example.app.MainActivity"
-    android:weightSum="1">
-
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <TabHost
         android:id="@+id/tabHost"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.10">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left|center_vertical"
+        android:background="@drawable/city1">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:orientation="vertical">
 
             <TabWidget
                 android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"></TabWidget>
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
                 <LinearLayout
                     android:id="@+id/tabCreator"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/city"
                     android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/Title"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="0.10"
-                        android:clickable="false"
-                        android:gravity="center"
-                        android:text="Contact Manager"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                     <ImageView
                         android:id="@+id/imgViewContactImage"
-                        android:layout_width="match_parent"
-                        android:layout_height="117dp"
-                        app:srcCompat="@drawable/pht" />
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/pht" />
 
                     <EditText
                         android:id="@+id/txtName"
-                        android:layout_width="match_parent"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="10dp"
                         android:ems="10"
-                        android:hint=" Name"
+                        android:hint="Contact Name"
                         android:inputType="textPersonName" />
 
                     <EditText
                         android:id="@+id/txtPhone"
-                        android:layout_width="match_parent"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:layout_weight="0.10"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
                         android:ems="10"
-                        android:hint="Phone Number" />
+                        android:hint="Phone Number"
+                        android:inputType="phone" />
 
                     <EditText
                         android:id="@+id/txtEmail"
-                        android:layout_width="match_parent"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:layout_weight="0.10"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
                         android:hint="Email"
                         android:inputType="textEmailAddress" />
 
                     <EditText
                         android:id="@+id/txtAddress"
-                        android:layout_width="match_parent"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:layout_weight="0.10"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
                         android:ems="10"
                         android:hint="Address"
                         android:inputType="textPostalAddress" />
 
                     <Button
                         android:id="@+id/btnAdd"
-                        android:layout_width="match_parent"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="65dp"
+                        android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:layout_weight="0.10"
-                        android:capitalize="none"
+                        android:background="@android:color/white"
+                        android:elevation="0dp"
+                        android:enabled="false"
                         android:text="Add Contact"
-                        android:textAppearance="@style/TextAppearance.AppCompat"
-                        android:textSize="18sp"
-                        android:visibility="visible"
-                        tools:text="Add Contact" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@android:color/background_dark"
+                        android:textColorHighlight="@android:color/background_dark"
+                        android:visibility="visible" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/tabContactList"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:weightSum="1">
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView7"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:layout_weight="0.01"
-                        android:gravity="center"
-                        android:text="aaa" />
+                        android:text="My Contacts"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
 
                     <ListView
                         android:id="@+id/listView"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.01" />
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center" />
                 </LinearLayout>
 
             </FrameLayout>
